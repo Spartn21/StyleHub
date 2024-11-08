@@ -1,3 +1,4 @@
+/* Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -5,44 +6,60 @@
     font-family: Arial, sans-serif;
 }
 
-body {
-    background-color: #f4f4f9;
+:root {
+    --primary-bg-color: #333;
+    --secondary-bg-color: #f4f4f9;
+    --highlight-bg-color: #ff6f61;
+    --text-color-light: #fff;
+    --text-color-dark: #333;
+    --border-color: #ddd;
 }
 
+/* Body */
+body {
+    background-color: var(--secondary-bg-color);
+    color: var(--text-color-dark);
+}
+
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    padding: 1rem;
+    background-color: var(--primary-bg-color);
+    padding: 1rem 2rem;
 }
 
 header .logo {
-    width: 150px;
+    max-width: 150px;
 }
 
 header nav ul {
     list-style: none;
     display: flex;
-}
-
-header nav ul li {
-    margin: 0 15px;
+    gap: 15px;
 }
 
 header nav ul li a {
-    color: #fff;
+    color: var(--text-color-light);
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
+header nav ul li a:hover {
+    color: var(--highlight-bg-color);
+}
+
+/* Hero Section */
 .hero {
     text-align: center;
-    padding: 4rem;
-    background-color: #ff6f61;
-    color: #fff;
+    padding: 4rem 2rem;
+    background-color: var(--highlight-bg-color);
+    color: var(--text-color-light);
 }
 
+/* Products Section */
 .products {
     padding: 2rem;
 }
@@ -51,23 +68,34 @@ header nav ul li a {
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .product-card {
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     padding: 1rem;
-    width: calc(33% - 2rem);
-    background-color: #fff;
+    width: calc(33.333% - 2rem);
+    background-color: var(--text-color-light);
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
 }
 
 .product-card img {
     max-width: 100%;
+    height: auto;
 }
 
+/* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--primary-bg-color);
+    color: var(--text-color-light);
     text-align: center;
     padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
 }
