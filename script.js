@@ -41,4 +41,7 @@ const fadeInOnScroll = () => {
         }
     });
 };
+
+// Initial check and event listener
+fadeInOnScroll();
 window.addEventListener('scroll', fadeInOnScroll);
