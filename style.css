@@ -3,7 +3,7 @@
     --primary-color: #D4AF37;          /* Gold */
     --primary-dark: #8B7500;           /* Dark Gold/Bronze */
     --secondary-color: #FFC0CB;        /* Pink accent */
-    --background-color: #000;          /* Black */
+    --background-color: #111;          /* Dark background for contrast */
     --text-color-light: #FAF9F6;       /* Off-white */
     --text-color-dark: #333;           /* Charcoal Gray */
 }
@@ -60,7 +60,7 @@ header nav ul li a.active {
 
 /* Hero Section */
 .hero {
-    padding: 10rem 2rem; /* Adjusted padding for visibility */
+    padding: 10rem 2rem;
     text-align: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('home/hero-bg.jpg');
     background-size: cover;
@@ -215,6 +215,47 @@ header nav ul li a.active {
 
 .size-guide tr:nth-child(even) {
     background-color: #f8f8f8; /* Light background for even rows */
+}
+
+/* Buyer Information Form Styling */
+.buyer-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: var(--text-color-light);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.buyer-form label {
+    font-weight: bold;
+    color: var(--text-color-dark);
+}
+
+.buyer-form input[type="text"],
+.buyer-form select {
+    padding: 0.5rem;
+    border: 1px solid var(--primary-dark);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.buyer-form button {
+    padding: 0.8rem;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buyer-form button:hover {
+    background-color: var(--secondary-color);
 }
 
 /* Contact Section */

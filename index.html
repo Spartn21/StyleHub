@@ -11,7 +11,7 @@
 
     <!-- Header Section -->
     <header>
-        <img src="home/Stylelogo.png" class="logo">
+        <img src="home/logo2.jpg" alt="Fashion Store Logo" class="logo">
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -91,7 +91,27 @@
                 </tbody>
             </table>
 
-            <p>Our sizes are standard, but if you have any questions, feel free to contact us for guidance!</p>
+            <!-- Buyer Information Form -->
+            <h3>Order Information</h3>
+            <p>Fill out your details below to inquire about a product:</p>
+            <form id="buyer-form" class="buyer-form" action="submit_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="product">Product:</label>
+                <input type="text" id="product" name="product" required>
+
+                <label for="size">Size:</label>
+                <select id="size" name="size" required>
+                    <option value="">Select Size</option>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                    <option value="X-Large">X-Large</option>
+                </select>
+
+                <button type="submit">Submit</button>
+            </form>
         </section>
 
         <!-- Contact Section -->
