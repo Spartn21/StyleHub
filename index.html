@@ -9,50 +9,53 @@
 </head>
 <body>
 
+    <!-- Header Section -->
     <header>
-        <img src="logo2.jpg" alt="Fashion Store Logo" class="logo">
+        <img src="home/logo2.jpg" alt="Fashion Store Logo" class="logo">
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-				<li><a href="products.php">Products</a></li>
+                <li><a href="products.php">Products</a></li>
                 <li><a href="contact.php">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Main Content -->
     <main>
+        <!-- Hero Section -->
         <section class="hero">
             <h1>Welcome to the Fashion Store</h1>
             <p>Discover the latest trends and styles</p>
             <button onclick="showAlert()">Shop Now</button>
         </section>
 
+        <!-- Products Section -->
         <section class="products">
             <h2>Featured Products</h2>
             <div class="product-list">
                 <?php include 'product.php'; ?>
             </div>
         </section>
-    </main>
-	
-	<body>
-	<p>Fashioneer is an online platform dedicated to all styles of fashions for both men and women.
-	
-	The platform gives you a chance to explore various fashion styles, <br>
-	the old fashion and the latest trends in fashion.
-	</P>
-	<img src="man4.jpg" alt="men style" width="400px" height="400px">
-	<img src="man1.jpg" alt="men style2" width="400px" height="400px">
-	<img src="man2.jpg" alt="men style3" width="400px" height="400px">
-	<p><br>
-	Fashioner is also known for its unique luxurious fashion trends that are eye catching everyone would want to try. 
-	The platform also stands out for its engaging content and insights into high-end fashion and modern style.
-	
-	
-	</body>
 
+        <!-- Additional Content Section -->
+        <section class="about">
+            <p>Fashioneer is an online platform dedicated to all styles of fashion for both men and women.</p>
+            <p>The platform gives you a chance to explore various fashion styles, including both classic and the latest trends.</p>
+
+            <div class="image-gallery">
+                <img src="home/man4.jpg" alt="Men's Style" width="400" height="400">
+                <img src="home/man1.jpg" alt="Men's Style 2" width="400" height="400">
+                <img src="home/man2.jpg" alt="Men's Style 3" width="400" height="400">
+            </div>
+
+            <p>Fashioneer is known for its unique luxurious fashion trends that catch everyone’s eye. The platform stands out for its engaging content and insights into high-end fashion and modern style.</p>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Fashioner. All rights reserved.</p>
+        <p>&copy; 2024 Fashioneer. All rights reserved.</p>
     </footer>
 
 </body>
