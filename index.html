@@ -11,12 +11,13 @@
 
     <!-- Header Section -->
     <header>
-        <img src="home/logo2.jpg" alt="Fashion Store Logo" class="logo">
+        <img src="home/Stylelogo.png" class="logo">
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.php">Products</a></li>
-                <li><a href="contact.php">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -24,32 +25,37 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section class="hero">
+        <section id="home" class="hero">
             <h1>Welcome to Style Hub</h1>
             <p>Discover the latest trends and styles</p>
             <button onclick="showAlert()">Shop Now</button>
         </section>
 
         <!-- Products Section -->
-        <section class="products">
+        <section id="products" class="products">
             <h2>Featured Products</h2>
             <div class="product-list">
                 <?php include 'product.php'; ?>
             </div>
         </section>
 
-        <!-- Additional Content Section -->
-        <section class="about">
+        <!-- About Section -->
+        <section id="about" class="about">
             <p>Style Hub is an online platform dedicated to all styles of fashion for both men and women.</p>
             <p>The platform gives you a chance to explore various fashion styles, including both classic and the latest trends.</p>
 
             <div class="image-gallery">
-                <img src="home/man4.jpg" alt="Men's Style" width="400" height="400">
-                <img src="home/man1.jpg" alt="Men's Style 2" width="400" height="400">
-                <img src="home/man2.jpg" alt="Men's Style 3" width="400" height="400">
+                <img src="home/man4.jpg" alt="Men's Style">
+                <img src="home/man1.jpg" alt="Men's Style 2">
+                <img src="home/man2.jpg" alt="Men's Style 3">
             </div>
+        </section>
 
-            <p>Style Hub is known for its unique luxurious fashion trends that catch everyone’s eye. The platform stands out for its engaging content and insights into high-end fashion and modern style.</p>
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <p>Email us at <a href="mailto:info@stylehub.com">info@stylehub.com</a></p>
+            <p>Follow us on social media for more updates!</p>
         </section>
     </main>
 

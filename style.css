@@ -1,19 +1,20 @@
 /* Color Variables */
 :root {
-    --primary-color: #D4AF37; /* Gold */
-    --primary-dark: #8B7500; /* Dark Gold/Bronze */
-    --secondary-color: #FFC0CB; /* Pink accent */
-    --background-color: #000000; /* Black */
-    --text-color-light: #FAF9F6; /* Off-white */
-    --text-color-dark: #333333; /* Charcoal Gray */
+    --primary-color: #D4AF37;          /* Gold */
+    --primary-dark: #8B7500;           /* Dark Gold/Bronze */
+    --secondary-color: #FFC0CB;        /* Pink accent */
+    --background-color: #000;          /* Black */
+    --text-color-light: #FAF9F6;       /* Off-white */
+    --text-color-dark: #333;           /* Charcoal Gray */
 }
 
-/* Base Styles */
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
 }
 
 body {
@@ -28,6 +29,10 @@ header {
     align-items: center;
     background-color: var(--background-color);
     padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
 }
 
 header .logo {
@@ -47,23 +52,34 @@ header nav ul li a {
     transition: color 0.3s;
 }
 
-header nav ul li a:hover {
-    color: var(--secondary-color);
+header nav ul li a.active {
+    color: var(--secondary-color); /* Highlight the active link */
 }
 
 /* Hero Section */
 .hero {
+    padding: 6rem 2rem;
     text-align: center;
-    padding: 4rem 2rem;
-    background-color: var(--primary-dark);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('home/hero-bg.jpg');
+    background-size: cover;
     color: var(--text-color-light);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
 }
 
 .hero button {
     background-color: var(--primary-color);
     color: var(--background-color);
-    border: none;
     padding: 0.8rem 1.5rem;
+    border: none;
     font-size: 1rem;
     font-weight: bold;
     border-radius: 5px;
@@ -79,12 +95,13 @@ header nav ul li a:hover {
 .products {
     padding: 2rem;
     background-color: var(--background-color);
+    color: var(--text-color-light);
+    text-align: center;
 }
 
 .products h2 {
     color: var(--primary-color);
-    text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .product-list {
@@ -99,14 +116,12 @@ header nav ul li a:hover {
     padding: 1rem;
     width: calc(33.333% - 2rem);
     background-color: var(--text-color-light);
+    color: var(--text-color-dark);
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transform: translateY(20px);
 }
 
 .product-card img {
@@ -117,6 +132,7 @@ header nav ul li a:hover {
 
 .product-card h3 {
     color: var(--primary-color);
+    margin: 10px 0;
 }
 
 .product-card p {
@@ -159,9 +175,22 @@ header nav ul li a:hover {
 
 .image-gallery img {
     border-radius: 5px;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Section */
+.contact {
+    padding: 2rem;
+    background-color: var(--background-color);
+    color: var(--text-color-light);
+    text-align: center;
+}
+
+.contact h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
 }
 
 /* Footer */
@@ -176,4 +205,28 @@ footer {
 
 footer p {
     color: var(--primary-color);
+}
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .product-card {
+        width: 100%;
+    }
+
+    .image-gallery img {
+        width: 100%;
+        height: auto;
+    }
 }
