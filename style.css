@@ -1,3 +1,13 @@
+/* Color Variables */
+:root {
+    --primary-color: #D4AF37; /* Gold */
+    --primary-dark: #8B7500; /* Dark Gold/Bronze */
+    --secondary-color: #FFC0CB; /* Pink accent */
+    --background-color: #000000; /* Black */
+    --text-color-light: #FAF9F6; /* Off-white */
+    --text-color-dark: #333333; /* Charcoal Gray */
+}
+
 /* Base Styles */
 * {
     margin: 0;
@@ -6,19 +16,9 @@
     font-family: Arial, sans-serif;
 }
 
-:root {
-    --primary-bg-color: #333;
-    --secondary-bg-color: #f4f4f9;
-    --highlight-bg-color: #ff6f61;
-    --text-color-light: #fff;
-    --text-color-dark: #333;
-    --border-color: #ddd;
-}
-
-/* Body */
 body {
-    background-color: var(--secondary-bg-color);
-    color: var(--text-color-dark);
+    background-color: var(--background-color);
+    color: var(--text-color-light);
 }
 
 /* Header */
@@ -26,7 +26,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--primary-bg-color);
+    background-color: var(--background-color);
     padding: 1rem 2rem;
 }
 
@@ -41,61 +41,139 @@ header nav ul {
 }
 
 header nav ul li a {
-    color: var(--text-color-light);
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 header nav ul li a:hover {
-    color: var(--highlight-bg-color);
+    color: var(--secondary-color);
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
     padding: 4rem 2rem;
-    background-color: var(--highlight-bg-color);
+    background-color: var(--primary-dark);
     color: var(--text-color-light);
+}
+
+.hero button {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero button:hover {
+    background-color: var(--secondary-color);
 }
 
 /* Products Section */
 .products {
     padding: 2rem;
+    background-color: var(--background-color);
+}
+
+.products h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .product-list {
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .product-card {
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--primary-dark);
     padding: 1rem;
     width: calc(33.333% - 2rem);
     background-color: var(--text-color-light);
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .product-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .product-card img {
     max-width: 100%;
     height: auto;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    color: var(--primary-color);
+}
+
+.product-card p {
+    color: var(--text-color-dark);
+}
+
+.product-card button {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-card button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* About Section */
+.about {
+    padding: 2rem;
+    background-color: var(--text-color-dark);
+    color: var(--text-color-light);
+    text-align: center;
+}
+
+.about p {
+    margin-bottom: 1rem;
+}
+
+.image-gallery {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.image-gallery img {
+    border-radius: 5px;
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer */
 footer {
-    background-color: var(--primary-bg-color);
+    background-color: var(--background-color);
     color: var(--text-color-light);
     text-align: center;
     padding: 1rem;
-    margin-top: 2rem;
     font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    color: var(--primary-color);
 }
