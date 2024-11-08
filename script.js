@@ -42,6 +42,6 @@ const fadeInOnScroll = () => {
     });
 };
 
-// Initial check and event listener
+// Initial check and event listener for fade-in
 fadeInOnScroll();
 window.addEventListener('scroll', fadeInOnScroll);
