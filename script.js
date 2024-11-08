@@ -30,18 +30,3 @@ window.addEventListener('scroll', () => {
         }
     });
 });
-
-// Fade-in effect on scroll for elements
-const fadeElements = document.querySelectorAll('.product-card, .about, .contact');
-const fadeInOnScroll = () => {
-    fadeElements.forEach(element => {
-        const rect = element.getBoundingClientRect();
-        if (rect.top < window.innerHeight) {
-            element.classList.add('fade-in');
-        }
-    });
-};
-
-// Initial check and event listener for fade-in
-fadeInOnScroll();
-window.addEventListener('scroll', fadeInOnScroll);
