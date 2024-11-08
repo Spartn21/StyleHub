@@ -1,16 +1,16 @@
 <?php
-// Sample product array (could be from a database)
+// Sample product array (prices converted to UGX format)
 $products = [
-    ['name' => 'Product 1', 'image' => 'home/shirt1.jpg', 'price' => 29.19],
-    ['name' => 'Product 2', 'image' => 'home/shirt2.jpg', 'price' => 39.29],
-    ['name' => 'Product 3', 'image' => 'home/shirt3.jpg', 'price' => 38.59],
-    ['name' => 'Product 4', 'image' => 'home/shirt4.jpg', 'price' => 29.49],
-    ['name' => 'Product 5', 'image' => 'home/shirt5.jpg', 'price' => 45.94],
-    ['name' => 'Product 6', 'image' => 'home/shirt6.jpg', 'price' => 57.97],
-    ['name' => 'Product 7', 'image' => 'home/shirt7.jpg', 'price' => 39.59],
-    ['name' => 'Product 8', 'image' => 'home/shirt8.jpg', 'price' => 32.32],
-    ['name' => 'Product 9', 'image' => 'home/shirt9.jpg', 'price' => 41.19],
-    ['name' => 'Product 10', 'image' => 'home/shirt10.jpg', 'price' => 32.18]
+    ['name' => 'Product 1', 'image' => 'home/shirt1.jpg', 'price' => 108000],
+    ['name' => 'Product 2', 'image' => 'home/shirt2.jpg', 'price' => 145000],
+    ['name' => 'Product 3', 'image' => 'home/shirt3.jpg', 'price' => 142000],
+    ['name' => 'Product 4', 'image' => 'home/shirt4.jpg', 'price' => 109000],
+    ['name' => 'Product 5', 'image' => 'home/shirt5.jpg', 'price' => 170000],
+    ['name' => 'Product 6', 'image' => 'home/shirt6.jpg', 'price' => 214000],
+    ['name' => 'Product 7', 'image' => 'home/shirt7.jpg', 'price' => 146000],
+    ['name' => 'Product 8', 'image' => 'home/shirt8.jpg', 'price' => 119000],
+    ['name' => 'Product 9', 'image' => 'home/shirt9.jpg', 'price' => 152000],
+    ['name' => 'Product 10', 'image' => 'home/shirt10.jpg', 'price' => 118000]
 ];
 ?>
 
@@ -60,8 +60,8 @@ $products = [
                 <!-- Display product name -->
                 <h2><?php echo htmlspecialchars($product['name']); ?></h2>
                 
-                <!-- Display product price -->
-                <p class="price">$<?php echo number_format($product['price'], 2); ?></p>
+                <!-- Display product price in UGX format -->
+                <p class="price">UGX <?php echo number_format($product['price']); ?></p>
             </div>
         <?php endforeach; ?>
     </div>
