@@ -7,10 +7,6 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
         });
     });
 });
-
-// Show alert when "Shop Now" button is clicked
-function showAlert() {
-    alert("Welcome to Style Hub! Explore our products.");
 }
 
 // Highlight active navigation link on scroll

@@ -15,7 +15,7 @@
         <nav>
             <ul>
                 <li><a href="#home" class="active">Home</a></li>
-                <li><a href="productpage.php">Products</a></li>
+                <li><a href="productpage.php">Products</a></li> <!-- Link to PHP product page -->
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -28,14 +28,18 @@
         <section id="home" class="hero">
             <h1 style="color: var(--text-color-light);">Welcome to Style Hub</h1>
             <p style="color: var(--text-color-medium);">Discover the latest trends and styles</p>
-            <button onclick="showAlert()" style="color: var(--background-color); background-color: var(--primary-color);">Shop Now</button>
+            <p>Explore our amazing products, learn more about what we offer. StyleHub is an online platform dedicated to all styles 
+                <br>of fashion for both men and women. The platform gives you a chance 
+                to explore various fashion styles, from classic to the latest trends.</p> 
+            <p>StyleHub is also known for its unique luxurious fashion trends that are eye-catching and engaging, with insights into high-end and modern style.</p>
+            <!-- "Shop Now" button linked to product page -->
+            <a href="productpage.php" class="shop-now-btn" style="color: var(--background-color); background-color: var(--primary-color); padding: 10px 20px; border-radius: 5px; text-decoration: none;">Shop Now</a>
         </section>
 
-        <!-- Products Section -->
+        <!-- Featured Products Section (optional static display) -->
         <section id="products" class="products">
             <h2 style="color: var(--primary-color);">Featured Products</h2>
             <div class="product-list">
-                <!-- Hardcoded Product Cards -->
                 <div class="product-card">
                     <img src="home/man1.jpg" alt="Product 1">
                     <h3 style="color: var(--primary-color);">Product 1</h3>
@@ -135,7 +139,7 @@
         <!-- Contact Section -->
         <section id="contact" class="contact">
             <h2 style="color: var(--primary-color);">Contact Us</h2>
-            <p style="color: var(--text-color-medium);">Email us at <a href="mailto:info@stylehub.com" style="color: var(--primary-color);">GROUP-E@stylehub.com</a></p>
+            <p style="color: var(--text-color-medium);">Email us at <a href="mailto:info@stylehub.com" style="color: var(--primary-color);">info@stylehub.com</a></p>
             <p style="color: var(--text-color-medium);">Follow us on social media for more updates!</p>
         </section>
     </main>
